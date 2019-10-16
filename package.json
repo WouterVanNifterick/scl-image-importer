@@ -1,0 +1,12 @@
+{
+  "name": "imageimporter",
+  "version": "1.0.0",
+  "description": "SCL Image Importer",
+  "main": "index.js",
+  "author": "Wouter van Nifterick <wouter@ars.nl>",
+  "license": "MIT",
+  "dependencies": {
+    "fast-glob": "^3.0.4",
+    "mysql": "^2.17.1"
+  }
+}
