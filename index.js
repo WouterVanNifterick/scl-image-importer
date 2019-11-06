@@ -3,13 +3,12 @@ var mysql = require('mysql');
 let allSQL=[];
 
 const newConnection = () => {
-    let dbConn = mysql.createConnection({
-        host: '10.4.1.23',
-        user: 'scl_api.user',
-        password: 'scl',
-        database: 'scapeye',
+    let config = {
+        ...require('./secrets.js'),
+        ...optionalRequire('./secrets.dev.js'),
         multipleStatements: true
-    });
+    }
+    let dbConn = mysql.createConnection(config);
     dbConn.connect(); 
     return dbConn;
 }
